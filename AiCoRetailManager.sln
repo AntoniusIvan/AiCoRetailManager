@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.33423.256
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIRMDataManager", "AIRMDataManager\AIRMDataManager.csproj", "{F219EAFB-6536-469D-8194-E978C3F5A6CA}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AIRMData", "AIRMData\AIRMData.sqlproj", "{3EAC7994-B8C8-4328-B3E1-111E61418C30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIRMDesktopUI", "AIRMDesktopUI\AIRMDesktopUI.csproj", "{02C6CD01-B47F-4DEA-BF69-8903BFB2AFBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,16 @@ Global
 		{F219EAFB-6536-469D-8194-E978C3F5A6CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F219EAFB-6536-469D-8194-E978C3F5A6CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F219EAFB-6536-469D-8194-E978C3F5A6CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EAC7994-B8C8-4328-B3E1-111E61418C30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EAC7994-B8C8-4328-B3E1-111E61418C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EAC7994-B8C8-4328-B3E1-111E61418C30}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3EAC7994-B8C8-4328-B3E1-111E61418C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EAC7994-B8C8-4328-B3E1-111E61418C30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EAC7994-B8C8-4328-B3E1-111E61418C30}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{02C6CD01-B47F-4DEA-BF69-8903BFB2AFBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02C6CD01-B47F-4DEA-BF69-8903BFB2AFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02C6CD01-B47F-4DEA-BF69-8903BFB2AFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02C6CD01-B47F-4DEA-BF69-8903BFB2AFBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
