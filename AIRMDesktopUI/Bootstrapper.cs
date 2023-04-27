@@ -1,4 +1,5 @@
-﻿using AIRMDesktopUI.ViewModels;
+﻿using AIRMDesktopUI.Helpers;
+using AIRMDesktopUI.ViewModels;
 using Caliburn.Micro;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace AIRMDesktopUI
 {
@@ -15,6 +17,11 @@ namespace AIRMDesktopUI
     public Bootstrapper()
     {
       Initialize();
+
+      ConventionManager.AddElementConvention<PasswordBox>(
+        PasswordBoxHelper.BoundPasswordProperty,
+        "Password",
+        "PasswordChanged");
     }
     // we want to get container to get information of this instead of contstructor
     protected override void Configure()
@@ -23,7 +30,8 @@ namespace AIRMDesktopUI
 
       _container
         .Singleton<IWindowManager, WindowManager>()
-        .Singleton<IEventAggregator, EventAggregator>();
+        .Singleton<IEventAggregator, EventAggregator>()
+        .Singleton<IAPIHelper, APIHelper>();
 
 
       GetType().Assembly.GetTypes()
