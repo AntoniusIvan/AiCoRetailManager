@@ -1,4 +1,6 @@
 ﻿using AIRMDesktopUI.Helpers;
+using AIRMDesktopUI.Library.Api;
+using AIRMDesktopUI.Library.Models;
 using AIRMDesktopUI.ViewModels;
 using Caliburn.Micro;
 using System;
@@ -31,6 +33,7 @@ namespace AIRMDesktopUI
       _container
         .Singleton<IWindowManager, WindowManager>()
         .Singleton<IEventAggregator, EventAggregator>()
+        .Singleton<ILoggedInUserModel, LoggedInUserModel>()
         .Singleton<IAPIHelper, APIHelper>();
 
 

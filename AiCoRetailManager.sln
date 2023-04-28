@@ -9,6 +9,10 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AIRMData", "AIRMData\AIRMDa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIRMDesktopUI", "AIRMDesktopUI\AIRMDesktopUI.csproj", "{02C6CD01-B47F-4DEA-BF69-8903BFB2AFBC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIRMDataManager.Library", "AIRMDataManager.Library\AIRMDataManager.Library.csproj", "{71B3BD95-98AA-4B0F-BCF7-FBE07D20846F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIRMDesktopUI.Library", "AIRMDesktopUI.Library\AIRMDesktopUI.Library.csproj", "{4F2945AD-B67B-481B-9BA3-2613AA70C8F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,14 @@ Global
 		{02C6CD01-B47F-4DEA-BF69-8903BFB2AFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02C6CD01-B47F-4DEA-BF69-8903BFB2AFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02C6CD01-B47F-4DEA-BF69-8903BFB2AFBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71B3BD95-98AA-4B0F-BCF7-FBE07D20846F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71B3BD95-98AA-4B0F-BCF7-FBE07D20846F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71B3BD95-98AA-4B0F-BCF7-FBE07D20846F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71B3BD95-98AA-4B0F-BCF7-FBE07D20846F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F2945AD-B67B-481B-9BA3-2613AA70C8F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F2945AD-B67B-481B-9BA3-2613AA70C8F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F2945AD-B67B-481B-9BA3-2613AA70C8F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F2945AD-B67B-481B-9BA3-2613AA70C8F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
