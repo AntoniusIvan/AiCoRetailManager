@@ -28,7 +28,8 @@ namespace AIRMDesktopUI
     // we want to get container to get information of this instead of contstructor
     protected override void Configure()
     {
-      _container.Instance(_container);
+      _container.Instance(_container)
+        .PerRequest<IProductEndpoint, ProductEndpoint>();
 
       _container
         .Singleton<IWindowManager, WindowManager>()
