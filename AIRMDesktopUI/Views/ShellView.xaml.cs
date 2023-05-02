@@ -14,14 +14,14 @@ using System.Windows.Shapes;
 
 namespace AIRMDesktopUI.Views
 {
-  /// <summary>
-  /// Interaction logic for ShellView.xaml
-  /// </summary>
-  public partial class ShellView : Window
-  {
-    public ShellView()
+    /// <summary>
+    /// Interaction logic for ShellView.xaml
+    /// </summary>
+    public partial class ShellView : Window
     {
-      InitializeComponent();
+        public ShellView()
+        {
+            InitializeComponent();
+        }
     }
-  }
 }

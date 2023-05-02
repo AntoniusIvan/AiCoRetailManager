@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace AIRMDataManager.Library.DataAccess
 {
-  public class UserData
-  {
-    public List<UserModel> GetUserById(string Id)
+    public class UserData
     {
-      SqlDataAccess sql = new SqlDataAccess();
+        public List<UserModel> GetUserById(string Id)
+        {
+            SqlDataAccess sql = new SqlDataAccess();
 
-      var p = new { Id = Id };
+            var p = new { Id = Id };
 
-      var output = sql.LoadData<UserModel, dynamic>("dbo.spUserLookup", p, "AIRMData");
+            var output = sql.LoadData<UserModel, dynamic>("dbo.spUserLookup", p, "AIRMData");
 
-      return output;
+            return output;
+        }
     }
-  }
 }

@@ -9,7 +9,8 @@ using System.Web.Http;
 
 namespace AIRMDataManager.Controllers
 {
-  [Authorize]
+  //[Authorize]
+  [Authorize(Roles = "Cashier")]
   public class ProductController : ApiController
   {
     public List<ProductModel> Get()

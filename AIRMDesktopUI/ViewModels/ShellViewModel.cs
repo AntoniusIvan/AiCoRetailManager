@@ -1,39 +1,66 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Caliburn.Micro;
 using AIRMDesktopUI.EventModels;
-using Caliburn.Micro;
+using AIRMDesktopUI.Library.Api;
+using AIRMDesktopUI.Library.Models;
 
 namespace AIRMDesktopUI.ViewModels
 {
-  public class ShellViewModel : Conductor<object>, IHandle<LogOnEvent>
-  {
-    private IEventAggregator _events;
-    private SalesViewModel _salesVM;
-    private SimpleContainer _container;
-    public ShellViewModel(//LoginViewModel loginVM//
-       IEventAggregator events
-      , SalesViewModel salesVM
-      , SimpleContainer container)
+    public class ShellViewModel : Conductor<object>, IHandle<LogOnEvent>
     {
-      _events = events;
-      _salesVM = salesVM;
-      _container = container;
+        private IEventAggregator _events;
+        private SalesViewModel _salesVM;
+        private ILoggedInUserModel _user;
+        private IAPIHelper _apiHelper;
 
-      _events.Subscribe(this);
+        public ShellViewModel(IEventAggregator events, SalesViewModel salesVM, ILoggedInUserModel user, IAPIHelper apiHelper)
+        {
+            _events = events;
+            _salesVM = salesVM;
+            _user = user;
+            _apiHelper = apiHelper;
 
-      ActivateItem(_container.GetInstance<LoginViewModel>());
+            _events.Subscribe(this);
 
-      //_events.Subscribe(this);
-      //ActivateItem(_loginVM);
+            ActivateItem(IoC.Get<LoginViewModel>());
+        }
+
+        public bool IsLoggedIn
+        {
+            get
+            {
+                bool output = false;
+
+                if (string.IsNullOrWhiteSpace(_user.Token) == false)
+                {
+                    output = true;
+                }
+
+                return output;
+            }
+        }
+
+        public void ExitApplication()
+        {
+            TryClose();
+        }
+
+        public void UserManagement()
+        {
+            ActivateItem(IoC.Get<UserDisplayViewModel>());
+        }
+
+        public void LogOut()
+        {
+            _user.ResetUserModel();
+            _apiHelper.LogOffUser();
+            ActivateItem(IoC.Get<LoginViewModel>());
+            NotifyOfPropertyChange(() => IsLoggedIn);
+        }
+
+        public void Handle(LogOnEvent message)
+        {
+            ActivateItem(_salesVM);
+            NotifyOfPropertyChange(() => IsLoggedIn);
+        }
     }
-
-    public void Handle(LogOnEvent message)
-    {
-      ActivateItem(_salesVM);
-      //_loginVM = _container.GetInstance<LoginViewModel>();
-    }
-  }
 }

@@ -2,7 +2,8 @@
 AS
 begin
 	set nocount on;
-	select Id, ProductName, [Description], RetailPrice, QuantityInStock
-	from dbo.Product
-	order by ProductName;
+
+	SELECT Id, ProductName, [Description], RetailPrice, QuantityInStock, IsTaxable
+	FROM dbo.Product
+	ORDER BY ProductName
 end
